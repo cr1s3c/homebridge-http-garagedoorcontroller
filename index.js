@@ -645,13 +645,13 @@ HttpGarageDoorControllerAccessory.prototype = {
 	_doorStateToString: function(doorState) {
 		switch (doorState) {
 			case DoorState.OPEN:
-				return "OPEN";
+				return "1";
 			case DoorState.CLOSED:
-				return "CLOSED";
+				return "0";
 			case DoorState.OPENING:
-				return "OPENING";
+				return "2";
 			case DoorState.CLOSING:
-				return "CLOSING";
+				return "3";
 			case DoorState.STOPPED:
 				return "STOPPED";
 			default:
@@ -669,13 +669,13 @@ HttpGarageDoorControllerAccessory.prototype = {
 
 	_doorStateToState: function(doorState) {
 		switch (doorState.toUpperCase()) {
-			case "OPEN":
+			case "1":
 				return DoorState.OPEN;
-			case "CLOSED":
+			case "0":
 				return DoorState.CLOSED;
-			case "OPENING":
+			case "2":
 				return DoorState.OPENING;
-			case "CLOSING":
+			case "3":
 				return DoorState.CLOSING;
 			case "UNKNOWN":
 			case "STOPPED":
